@@ -21,7 +21,6 @@ function bookMarking() {
             },
             credentials: 'same-origin'
           }).then(() => toggleIcon(event))
-          // bookmarking.classList.toggle(".dev-bookmark-black");
       });
     })
   }
