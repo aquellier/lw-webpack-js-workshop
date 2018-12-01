@@ -19,3 +19,5 @@ import { slider } from '../components/portfolio';
 slider();
 import { select } from '../components/select';
 select();
+import { animateSubnavInput } from '../components/subnav';
+animateSubnavInput();
