@@ -6,20 +6,23 @@ const parseDate = (string) => {
   return new Date(string.replace(pattern,'$3-$2-$1'));
 }
 
+const numberWithCommas = (number) => {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function updateCosts(startDateInput, endDateInput) {
-  const startDate = parseDate(startDateInput.value);
-  const endDate = parseDate(endDateInput.value);
-  const hoursField = document.getElementById('hours');
-  const priceField = document.getElementById('price');
-  const fee = document.getElementById('service-fee');
-  const totalPrice = document.getElementById('total-price');
+  let startDate = parseDate(startDateInput.value);
+  let endDate = parseDate(endDateInput.value);
+  let hoursField = document.getElementById('hours');
+  let priceField = document.getElementById('price');
   let hours = Math.ceil((endDate - startDate) / (1000 * 3600 * 24)) * 6;
   hoursField.innerHTML = hours;
-  const hourPrice = document.querySelector('.costs').dataset.rate;
-  console.log(hourPrice);
-  const basePrice = priceField.innerHTML = hours * hourPrice;
-  const feePrice = fee.innerHTML = priceField.innerHTML * 0.15;
-  totalPrice.innerHTML = basePrice + feePrice;
+  let fee = document.getElementById('service-fee');
+  let totalPrice = document.getElementById('total-price');
+  let hourPrice = document.querySelector('.costs').dataset.rate;
+  let basePrice = priceField.innerHTML = hours * hourPrice;
+  let feePrice = fee.innerHTML = priceField.innerHTML * 0.15;
+  totalPrice.innerHTML = numberWithCommas(basePrice + feePrice);
 }
 
 function addCosts() {

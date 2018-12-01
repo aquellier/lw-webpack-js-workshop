@@ -15,3 +15,5 @@ import { bookMarking } from '../components/bookmarking';
 bookMarking();
 import { calendar } from '../components/flatpickr';
 calendar();
+import { slider } from '../components/portfolio';
+slider();
