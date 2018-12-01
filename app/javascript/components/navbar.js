@@ -3,7 +3,7 @@ function navbarScroll() {
   const navbar = document.querySelector('.navbar-wagon-transparent');
   if (navbar) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY >= window.innerHeight) {
+      if (window.scrollY >= window.innerHeight/2) {
         navbar.classList.remove('navbar-wagon-transparent');
         navbar.classList.add('navbar-wagon-filled');
       } else {

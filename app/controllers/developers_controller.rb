@@ -2,6 +2,11 @@ class DevelopersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_developer, only: [:show, :edit, :update]
 
+  def home
+    @developers = Developer.top_6
+    @skills = Skill.pluck(:name).sort
+  end
+
   def index
     @skills = Skill.pluck(:name).sort
     @query = params[:q]

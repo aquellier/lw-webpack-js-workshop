@@ -5,6 +5,7 @@
     "@rails/webpacker": "3.5",
     "bootstrap": "3",
     "jquery": "^3.3.1",
+    "js-autocomplete": "^1.0.4",
     "rails-ujs": "^5.2.1",
     "typed.js": "^2.0.9"
   },
