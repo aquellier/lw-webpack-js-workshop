@@ -13,3 +13,5 @@ if (homePage) {
 }
 import { bookMarking } from '../components/bookmarking';
 bookMarking();
+import { calendar } from '../components/flatpickr';
+calendar();
