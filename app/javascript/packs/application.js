@@ -8,4 +8,8 @@ if (homePage) {
 import { navbarScroll } from '../components/navbar';
 navbarScroll();
 import { launchAutoComplete } from '../components/autocomplete';
-launchAutoComplete();
+if (homePage) {
+  launchAutoComplete();
+}
+import { bookMarking } from '../components/bookmarking';
+bookMarking();
