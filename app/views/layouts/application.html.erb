@@ -9,7 +9,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
-  <body>
+  <body class="<%= controller_name %> <%= action_name %>" >
     <%= render 'shared/navbar' unless devise_controller? %>
     <div class="page-wrapper">
       <%= yield %>
@@ -17,5 +17,6 @@
     <%= render 'shared/footer' unless devise_controller? %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+
   </body>
 </html>
