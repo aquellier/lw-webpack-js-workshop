@@ -17,3 +17,5 @@ import { calendar } from '../components/flatpickr';
 calendar();
 import { slider } from '../components/portfolio';
 slider();
+import { select } from '../components/select';
+select();
