@@ -39,3 +39,13 @@ input:disabled {
     flex: 1;
   }
 }
+
+.form-sign {
+  margin: 25px;
+  padding: 25px;
+  border-radius: 2px;
+  background-color: white;
+  .btn {
+    background-color: $brand-success;
+  }
+}
