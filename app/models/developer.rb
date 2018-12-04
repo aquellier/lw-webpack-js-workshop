@@ -11,7 +11,7 @@ class Developer < ApplicationRecord
   default_scope { order(hourly_rate: :desc) }
 
   def self.find_by_skill(skill)
-    joins(:skills).where("skills.name ILIKE ?", "%#{skill}%")
+    joins(:skills).where("skills.name ILIKE ?", "%#{skill}%").distinct
   end
 
   def self.find_by_price_range(min, max)
